@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index_style.css">
+        <title>Crud</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    </head>
+    <body>
+       <div class="container py-5">
+           <div class="form-group">
+               <label>name :</label>
+               <input onkeyup="validForm(this.value)" id="productNameInp" class="form-control  ">
+               <small class="text-muted">must be in 10-20 character</small>
+            </div>
+           <div class="form-group">
+            <label> price :</label>
+            <input id="productPriceInp" type="number" class="form-control  ">
+            <small class="text-muted">required</small>
+        </div>
+        <div class="form-group">
+            <label>Categorey :</label>
+            <input id="productCategoreyInp" type="text" class="form-control  ">
+            <small class="text-muted">required</small>
+
+        </div>
+        <div class="form-group">
+            <label>description :</label>
+            <textarea id="productDescInp" class="form-control  "></textarea>
+            <small class="text-muted">required</small>
+        </div>
+        <button id="addBtn" onclick="addProduct()" class="btn btn-info ">add product</button>
+       </div>
+
+       <div class="container-fluid py-5 ">
+           <h2 class="text-center">Our Products</h2>
+           <input onkeyup="searchInpt(this.value)" class="form-control w-50 m-auto  ">
+           <div class="row mt-5" id="productRow">
+             
+
+        </div>
+       </div>
+
+
+        <script src="js/first.js"></script>
+    </body>
+</html>
